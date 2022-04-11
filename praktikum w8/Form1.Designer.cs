@@ -95,7 +95,7 @@ namespace praktikum_w8
             // labelstadium
             // 
             this.labelstadium.AutoSize = true;
-            this.labelstadium.Location = new System.Drawing.Point(411, 290);
+            this.labelstadium.Location = new System.Drawing.Point(462, 286);
             this.labelstadium.Name = "labelstadium";
             this.labelstadium.Size = new System.Drawing.Size(0, 20);
             this.labelstadium.TabIndex = 5;
@@ -167,7 +167,7 @@ namespace praktikum_w8
             // labelkapasitas
             // 
             this.labelkapasitas.AutoSize = true;
-            this.labelkapasitas.Location = new System.Drawing.Point(411, 337);
+            this.labelkapasitas.Location = new System.Drawing.Point(462, 333);
             this.labelkapasitas.Name = "labelkapasitas";
             this.labelkapasitas.Size = new System.Drawing.Size(0, 20);
             this.labelkapasitas.TabIndex = 13;
@@ -175,7 +175,7 @@ namespace praktikum_w8
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(300, 290);
+            this.label3.Location = new System.Drawing.Point(351, 286);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(76, 20);
             this.label3.TabIndex = 14;
@@ -184,7 +184,7 @@ namespace praktikum_w8
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(299, 337);
+            this.label6.Location = new System.Drawing.Point(350, 333);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(78, 20);
             this.label6.TabIndex = 15;

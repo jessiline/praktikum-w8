@@ -52,14 +52,14 @@ namespace praktikum_w8
             try
             {
                 DataTable dtManager = new DataTable();
-                sqlQuery = "select t.team_name as 'namaTim' , p.player_name , m.manager_name, t.home_stadium, t.capacity from team t, manager m, player p WHERE t.manager_id = m.manager_id and t.captain_id = p.player_id and team_name = '" + comboBoxKiri.SelectedValue + "'";
+                sqlQuery = "select p.player_name , m.manager_name, concat(t.home_stadium, ',', t.city), t.capacity from team t, manager m, player p WHERE t.manager_id = m.manager_id and t.captain_id = p.player_id and team_name = '" + comboBoxKiri.SelectedValue + "'";
                 sqlCommand = new MySqlCommand(sqlQuery, sqlConnect);
                 sqlAdapter = new MySqlDataAdapter(sqlCommand);
                 sqlAdapter.Fill(dtManager);
-                labelManagerKiri.Text = dtManager.Rows[0][2].ToString();
-                labelKaptenKiri.Text = dtManager.Rows[0][1].ToString();
-                labelstadium.Text = dtManager.Rows[0]["home_stadium"].ToString();
-                labelkapasitas.Text = dtManager.Rows[0]["capacity"].ToString();
+                labelManagerKiri.Text = dtManager.Rows[0][1].ToString();
+                labelKaptenKiri.Text = dtManager.Rows[0][0].ToString();
+                labelstadium.Text = dtManager.Rows[0][2].ToString();
+                labelkapasitas.Text = dtManager.Rows[0][3].ToString();
                 ////dari sini
                 //sqlQuery = "select manager_name as `Manager` from manager m ,team t where t.team_name = '" + comboBoxKiri.SelectedValue.ToString() + "' and m.manager_id = t.manager_id ";
                 //sqlCommand = new MySqlCommand(sqlQuery, sqlConnect);
@@ -94,12 +94,12 @@ namespace praktikum_w8
             try
             {
                 DataTable dtManager = new DataTable();
-                sqlQuery = "select t.team_name as 'namaTim' , p.player_name , m.manager_name, t.home_stadium, t.capacity from team t, manager m, player p WHERE t.manager_id = m.manager_id and t.captain_id = p.player_id and team_name = '" + comboBoxKanan.SelectedValue + "'";
+                sqlQuery = "select p.player_name , m.manager_name, concat(t.home_stadium, ',', t.city), t.capacity from team t, manager m, player p WHERE t.manager_id = m.manager_id and t.captain_id = p.player_id and team_name = '" + comboBoxKanan.SelectedValue + "'";
                 sqlCommand = new MySqlCommand(sqlQuery, sqlConnect);
                 sqlAdapter = new MySqlDataAdapter(sqlCommand);
                 sqlAdapter.Fill(dtManager);
-                labelManagerKanan.Text = dtManager.Rows[0][2].ToString();
-                labelKaptenKanan.Text = dtManager.Rows[0][1].ToString();
+                labelManagerKanan.Text = dtManager.Rows[0][1].ToString();
+                labelKaptenKanan.Text = dtManager.Rows[0][0].ToString();
             }
             catch (Exception)
             {
